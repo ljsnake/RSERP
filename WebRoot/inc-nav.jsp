@@ -68,6 +68,30 @@
 										</li>
 								</ul>
 							</li>
+							
+							<li>
+								<span class="folder">用户管理</span>
+								<ul>
+										<li>
+											<span class="file">
+												<a onclick="urlTarget('yhgl_list.action');" title="列表用户">用户列表</a>
+												<br/>
+											</span>
+										</li>
+										<li>
+											<span class="file">
+												<a onclick="urlTarget('yhgl_add.action');" title="添加用户">用户新增</a>
+												<br/>
+											</span>
+										</li>
+										<li>
+											<span class="file">
+												<a onclick="urlTarget('yhgl_updatePassword.action');" title="密码修改">修改密码</a>
+												<br/>
+											</span>
+										</li>
+								</ul>
+							</li>
 					</ul>
 				</div>
 		</div>

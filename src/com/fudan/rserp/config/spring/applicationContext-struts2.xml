@@ -13,4 +13,9 @@
 		<property name="service" ref="htglService"/>
 	</bean>
 	
+	
+	
+	<bean id="yhglAction" class="com.fudan.rserp.module.yhgl.YhglAction">
+		<property name="service" ref="yhglService"/>
+	</bean>
 </beans>

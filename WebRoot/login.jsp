@@ -19,7 +19,7 @@
 		var evt = evt || event;
 		if (evt.keyCode == 13) {
 			if (document.getElementById("loginName").value == "") {
-				alert("请输入用户名...");
+				alert("请输入登录名...");
 			}else if (document.getElementById("password").value == "") {
 				alert("请输入密码...");
 			} else {
@@ -43,7 +43,7 @@
 			<form action="login_login.action" name="loginForm" method="post">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab_1">
 					<tr>
-						<td width="15%" height="30">用户名：</td>
+						<td width="15%" height="30">登录名：</td>
 						<td width="85%"><label> <input type="text" id="loginName" name="loginName" class="input_1" value="" tabindex="1" /> 
 						</label></td>
 					</tr>

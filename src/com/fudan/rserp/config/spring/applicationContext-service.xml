@@ -26,4 +26,16 @@
 		</property>
 	</bean>
 	
+	
+	
+	
+	
+	
+	<bean id="yhglService" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.fudan.rserp.module.yhgl.YhglService">
+				<property name="dao" ref="yhglDao" />
+			</bean>
+		</property>
+	</bean>
 </beans>

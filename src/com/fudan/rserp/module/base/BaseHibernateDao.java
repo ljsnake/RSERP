@@ -59,5 +59,7 @@ public class BaseHibernateDao extends HibernateDaoSupport {
 		return this.getSession().createSQLQuery(sql).setFirstResult(0).setMaxResults(1).uniqueResult();
 	}
 	// 待扩展
-
+	protected boolean isObjectEmpty(Object o){
+		return o==null || "".equals(o);
+	}
 }
