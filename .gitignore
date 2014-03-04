@@ -6,3 +6,4 @@ WebRoot/WEB-INF/classes/com/fudan/rserp/config/spring/applicationContext.xml
 WebRoot/WEB-INF/classes/database.properties
 WebRoot/WEB-INF/classes/struts.properties
 WebRoot/WEB-INF/classes/struts.xml
+src/database.properties
