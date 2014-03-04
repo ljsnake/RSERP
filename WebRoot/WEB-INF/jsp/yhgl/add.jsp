@@ -77,7 +77,7 @@ function commit(obj){
 		obj.disabled = false;
 	}else{
 		if(confirm('确认提交吗？')){
-			document.forms(0).submit();
+			document.forms[0].submit();
 		}else{
 			obj.disabled = false;
 		}
