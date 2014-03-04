@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!--登录-->
+	<bean id="loginDao" class="com.fudan.rserp.security.login.LoginDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="baseHibernateDao" class="com.fudan.rserp.module.base.BaseHibernateDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="tgglDao" class="com.fudan.rserp.module.tggl.TgglDao" parent="baseHibernateDao" />
+	<bean id="htglDao" class="com.fudan.rserp.module.htgl.HtglDao" parent="baseHibernateDao" />
+	
+</beans>

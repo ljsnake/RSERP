@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="loginService" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.fudan.rserp.security.login.LoginService">
+				<property name="loginDao" ref="loginDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="tgglService" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.fudan.rserp.module.tggl.TgglService">
+				<property name="dao" ref="tgglDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="htglService" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.fudan.rserp.module.htgl.HtglService">
+				<property name="dao" ref="htglDao" />
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

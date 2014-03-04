@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    
+	<bean id="loginAction" class="com.fudan.rserp.security.login.LoginAction">
+		<property name="loginService" ref="loginService"/>
+	</bean>
+	<bean id="tgglAction" class="com.fudan.rserp.module.tggl.TgglAction">
+		<property name="service" ref="tgglService"/>
+	</bean>
+	<bean id="htglAction" class="com.fudan.rserp.module.htgl.HtglAction">
+		<property name="service" ref="htglService"/>
+	</bean>
+	
+</beans>

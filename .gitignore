@@ -1,0 +1,8 @@
+*.class
+WebRoot/WEB-INF/classes/com/fudan/rserp/config/spring/applicationContext-hibernate.xml
+WebRoot/WEB-INF/classes/com/fudan/rserp/config/spring/applicationContext-service.xml
+WebRoot/WEB-INF/classes/com/fudan/rserp/config/spring/applicationContext-struts2.xml
+WebRoot/WEB-INF/classes/com/fudan/rserp/config/spring/applicationContext.xml
+WebRoot/WEB-INF/classes/database.properties
+WebRoot/WEB-INF/classes/struts.properties
+WebRoot/WEB-INF/classes/struts.xml

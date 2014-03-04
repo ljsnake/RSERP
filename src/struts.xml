@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<include file="struts-default.xml" />
+	
+	<package name="default" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="consoleAuthority" class="com.fudan.rserp.security.interceptor.SessionCheckInterceptor">
+			</interceptor>
+			<interceptor-stack name="mydefault">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="consoleAuthority" />
+			</interceptor-stack>
+		</interceptors>
+		<global-results>
+			<result name="toLogin" type="dispatcher">/login.jsp</result>
+		</global-results>
+		<action name="*_*" class="{1}Action" method="{2}">
+			<result name="input">${page}</result>
+			<result name="success">${page}</result>
+			<result name="redirect" type="redirect">${page}</result>
+			<result name="chain" type="chain">${page}</result>
+			<interceptor-ref name="mydefault" />
+		</action>
+	</package>
+</struts>
