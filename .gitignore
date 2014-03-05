@@ -7,3 +7,4 @@ WebRoot/WEB-INF/classes/database.properties
 WebRoot/WEB-INF/classes/struts.properties
 WebRoot/WEB-INF/classes/struts.xml
 src/database.properties
+.classpath
