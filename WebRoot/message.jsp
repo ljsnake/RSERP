@@ -8,11 +8,10 @@
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
 <meta http-equiv="expires" content="0" />
-<title>操作失败页面</title>
+<title>操作结果页面</title>
 </head>
 <body>
 	<center>
-		<h1>operation fail!</h1>
 		<table border="0" width="100%">
 				<tr>
 					<td align="center">
