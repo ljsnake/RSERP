@@ -19,5 +19,8 @@
         <property name="role" type="java.lang.String">
             <column name="ROLE" length="1"/>
         </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" length="30"/>
+        </property>
     </class>
 </hibernate-mapping>

@@ -14,7 +14,9 @@
 	</bean>
 	
 	
-	
+	<bean id="ajaxAction" class="com.fudan.rserp.module.ajax.AjaxAction">
+		<property name="service" ref="ajaxService"/>
+	</bean>
 	<bean id="yhglAction" class="com.fudan.rserp.module.yhgl.YhglAction">
 		<property name="service" ref="yhglService"/>
 	</bean>

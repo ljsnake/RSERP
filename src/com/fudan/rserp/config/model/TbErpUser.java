@@ -9,6 +9,7 @@ public class TbErpUser implements java.io.Serializable {
 	private String loginName;
 	private String password;
 	private String role;
+	private String email;
 	
 	public TbErpUser() {
 	}
@@ -42,5 +43,11 @@ public class TbErpUser implements java.io.Serializable {
 	}
 	public void setRole(String role) {
 		this.role = role;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

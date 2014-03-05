@@ -1,5 +1,6 @@
 package com.fudan.rserp.module.base;
 
+import java.io.Serializable;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Projections;
@@ -32,7 +33,7 @@ public class BaseHibernateDao extends HibernateDaoSupport {
 	 * 根据一个Class和一个id 查出这个对象
 	 */
 	@SuppressWarnings({ "rawtypes" })
-	public Object getObjectById(Class entityClass, String id) {
+	public Object getObjectById(Class entityClass, Serializable id) {
 		return this.getHibernateTemplate().get(entityClass, id);
 	}
 

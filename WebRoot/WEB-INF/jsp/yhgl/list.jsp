@@ -15,6 +15,16 @@
 	function createYh(){
 		window.location.href = "yhgl_add.action?reUrl=yhgl_list.action";
 	}
+	function showYh(id){
+// 		window.location.href = "yhgl_show.action?user.id="+id;
+		window.location.href = "yhgl_show.action?id="+id;
+		alert(id);
+	}
+	function updateYh(id){
+// 		window.location.href = "yhgl_update.action?user.id="+id;
+		window.location.href = "yhgl_update.action?id="+id;
+		alert(id);
+	}
 </script>
 </head>
 <body class="content-pages-body">
@@ -25,7 +35,7 @@
 			<tr>
 				<td class="commonTitle">
 				<div class="color2">
-					<b>用户列表</b>-查询
+					用户列表-查询
 				</div>
 				</td>
 			</tr>
@@ -62,10 +72,10 @@
 	<div class="content-pages-wrap01">
 		<div class="commonTitle">
 			<div class="color2">
-				<b>用户</b>-列表
+				用户列表
 			</div>
 		</div>
-		<table width="100%" border="1" rules="rows" class="tabstyle_gxy" id="resultTable">
+		<table width="100%" border="1" rules="rows" class="tabstyle_01" id="resultTable">
 			<s:if test="pageSet.resultList != null && pageSet.resultList.size() != 0">
 				<tr>
 					<th nowrap="nowrap" align="center">id</th>
@@ -80,8 +90,9 @@
 						<td nowrap="nowrap" align="center"><s:property value="#ls.name" /></td>
 						<td nowrap="nowrap" align="center"><s:property value="#ls.loginName" /></td>
 						<td nowrap="nowrap" align="center">
-							<input type="button" value="详细" title="查看" onclick="javasrcipt:void(0);" />
-							<input type="button" value="修改" title="修改" onclick="javasrcipt:void(0);" />
+							<a href="yhgl_show.action?user.id=<s:property value="#ls.id" />" >查看</a>
+							&nbsp;
+							<a href="yhgl_update.action?user.id=<s:property value="#ls.id" />" >修改</a>
 						</td>
 					</tr>
 				</s:iterator>

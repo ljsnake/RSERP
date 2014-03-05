@@ -1,5 +1,7 @@
 package com.fudan.rserp.module.yhgl;
 
+import java.util.List;
+
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 
@@ -21,5 +23,9 @@ public class YhglDao extends BaseHibernateDao{
 		}
 		ps = getCriteriaPageSet(criteria, ps);
 		return ps;
+	}
+	public List<?> checkUserLoginNamePasswordExist(String loginName,String password){
+		String hql = "select loginName from TbErpUser where loginName='"+loginName+"' and password='"+password+"'";
+		return queryByHQL(hql);
 	}
 }
