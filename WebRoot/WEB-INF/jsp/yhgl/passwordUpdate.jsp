@@ -48,7 +48,7 @@ function commit(obj){
 						修改密码
 					</div>
 				</div>
-				<table width="100%" align="center" cellpadding="0" cellspacing="1">
+				<table width="100%" align="center" cellpadding="0" cellspacing="1" class="commonTable">
 					<tr>
 						<td width="35%" align="right">
 							登录名：

@@ -13,7 +13,6 @@ public class HtglAction extends BaseAction {
 	private ListCondition condition;
 	
 	public String fbdwList(){
-		System.out.println("HtglAction-fbdwList");
 //		pageSet = service.getFbdwList(pageSet, condition);
 		if(pageSet==null){
 			pageSet = new PageSet();
