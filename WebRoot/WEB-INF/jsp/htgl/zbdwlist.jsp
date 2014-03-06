@@ -12,8 +12,8 @@
 		<script type="text/javascript" src="resource/js/checkInput.js"></script>
 		<title>分包单位列表</title>
 <script type="text/javascript">
-	function createfbdw(){
-	 	window.location.href="htgl_fbdwAdd.action?reUrl=htgl_fbdwList.action";
+	function createzbdw(){
+	 	window.location.href="htgl_zbdwAdd.action?reUrl=htgl_zbdwList.action";
 	}
 </script>
 	</head>
@@ -25,7 +25,7 @@
 			<tr>
 				<td class="commonTitle">
 				<div class="color2">
-					<b>分包单位</b>-查询
+					<b>总包单位</b>-查询
 				</div>
 				</td>
 			</tr>
@@ -39,11 +39,19 @@
 							<td align="left" width="35%">
 								<input name="condition.name" value="<s:property value="condition.name"/>"  onkeyup="checkCharacter(this)" maxlength="20"/>
 							</td>
-							<td colspan="2" align="center" width="50%">
+							<td align="right" width="15%">
+								联系人：
+							</td>
+							<td align="left" width="35%">
+								<input name="condition.contact" value="<s:property value="condition.contact"/>"  onkeyup="checkCharacter(this);" maxlength="20"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4" align="center">
 								<input class="submit_01" type="button"
 									onclick="javascript:setCurrPage(1);" value="搜 索" />
 								<input class="submit_01" type="button"
-									onclick="javascript:createfbdw();"   value="新 建" />
+									onclick="javascript:createzbdw();"   value="新 建" />
 							</td>
 						</tr>
 					</table>
@@ -54,7 +62,7 @@
 	<div class="content-pages-wrap01">
 		<div class="commonTitle">
 			<div class="color2">
-				<b>分包单位</b>-列表
+				<b>总包单位</b>-列表
 			</div>
 		</div>
 		<table width="100%" border="1" rules="rows" class="tabstyle_01" id="resultTable">
@@ -62,6 +70,9 @@
 				<tr>
 					<th nowrap="nowrap" align="center">id</th>
 					<th nowrap="nowrap" align="center">单位名称</th>
+					<th nowrap="nowrap" align="center">地址</th>
+					<th nowrap="nowrap" align="center">联系人</th>
+					<th nowrap="nowrap" align="center">联系方式</th>
 					<th nowrap="nowrap" align="center">操作</th>
 				</tr>
 				<s:iterator id="ls" value="pageSet.resultList">
@@ -69,10 +80,16 @@
 						onMouseOut="this.className=''">
 						<td nowrap="nowrap" align="center"><s:property value="#ls.id" /></td>
 						<td nowrap="nowrap" align="center"><s:property value="#ls.name" /></td>
+						<td nowrap="nowrap" align="center"><s:property value="#ls.address" /></td>
+						<td nowrap="nowrap" align="center"><s:property value="#ls.contact" /></td>
+						<td nowrap="nowrap" align="center" title="<s:property value="#ls.phone" escape="false"/>">
+							<s:if test="#ls.phone.length()>20"><s:property value="#ls.phone.substring(0,20)+'...'"escape="false"/></s:if>
+							<s:else><s:property value="#ls.phone" /></s:else>
+						</td>
 						<td nowrap="nowrap" align="center">
-							<a href="htgl_fbdwShow.action?id=<s:property value="#ls.id" />" >查看</a>
+							<a href="htgl_zbdwShow.action?id=<s:property value="#ls.id" />" >查看</a>
 							&nbsp;
-							<a href="htgl_fbdwUpdate.action?id=<s:property value="#ls.id" />" >修改</a>
+							<a href="htgl_zbdwUpdate.action?id=<s:property value="#ls.id" />" >修改</a>
 						</td>
 					</tr>
 				</s:iterator>

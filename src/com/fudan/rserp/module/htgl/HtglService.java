@@ -9,7 +9,25 @@ public class HtglService {
 		if(ps==null){
 			ps = new PageSet();
 		}
-		//TODO
+		ps = dao.getFbdwList(ps, lc);
+		return ps;
+	}
+	
+	
+	public PageSet getZbdwList(PageSet ps, ListCondition lc){
+		if(ps==null){
+			ps = new PageSet();
+		}
+		ps = dao.getZbdwList(ps, lc);
+		return ps;
+	}
+	
+	
+	public PageSet getHtList(PageSet ps, ListCondition lc){
+		if(ps==null){
+			ps = new PageSet();
+		}
+		ps = dao.getHtList(ps, lc);
 		return ps;
 	}
 	
