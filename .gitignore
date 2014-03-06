@@ -8,3 +8,6 @@ WebRoot/WEB-INF/classes/struts.properties
 WebRoot/WEB-INF/classes/struts.xml
 src/database.properties
 .classpath
+WebRoot/WEB-INF/classes/com/fudan/rserp/config/model/TbErpContract.hbm.xml
+WebRoot/WEB-INF/classes/com/fudan/rserp/config/model/TbErpContractor.hbm.xml
+WebRoot/WEB-INF/classes/com/fudan/rserp/config/model/TbErpSubcontractor.hbm.xml
