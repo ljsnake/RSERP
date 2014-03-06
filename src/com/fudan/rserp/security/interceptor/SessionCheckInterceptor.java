@@ -15,7 +15,7 @@ public class SessionCheckInterceptor extends MethodFilterInterceptor {
 		if(actionInvocation.getAction() instanceof LoginAction){
 			return actionInvocation.invoke();
 		}
-		Object loginName = atx.getSession().get("loginName");
+		Object loginName = atx.getSession().get("user.loginName");
 		if (loginName != null && !loginName.equals("")) {
 			return actionInvocation.invoke();
 		}else {
