@@ -33,7 +33,7 @@ public class LoginAction {
 			return Constants.INPUT;
 		}
 		Map session = ActionContext.getContext().getSession();
-		session.put("loginName", loginName);
+		session.put("user.loginName", loginName);
 		page = "/index.jsp";
 		return Constants.SUCCESS;
 	}

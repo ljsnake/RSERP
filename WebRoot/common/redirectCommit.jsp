@@ -5,32 +5,30 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Insert title here</title>
-		<base target="_self" />
+<!-- 		<base target="_self" /> -->
 		<script type="text/javascript">
-	var reUrl = "";
-	var willLocation = false;
-	var locationOnce = true;
+// 	var reUrl = "";
 <%--	var ru = ${param.reUrl };--%>
-	<s:if test="#parameters.reUrl[0] != null && !#parameters.reUrl[0].equals(\"\")">
+var willLocation = false;
+var locationOnce = true;
+	<s:if test="reUrl != null && !reUrl.equals(\"\")">
+		var reUrl1 = '<s:property escape="false" value="reUrl"/>';
 		function forwardPage() {
-			reUrl = location.search.substring(location.search.indexOf("=")+1);//取出redirectURL
-			document.getElementById("commit").href="../" + reUrl;
 			setInterval(locationNextPage, 1000);
 		}
-	
 		function locationNextPage() {
 			if (willLocation && locationOnce) {
 				locationOnce = false;
-				window.location.href = "../" + reUrl;
+				window.location.href = reUrl1;
 			} else {
 				willLocation = true;
 			}
 		}
 	</s:if>
-// 	<s:else>
-// 		function forwardPage() {
+	<s:else>
+		function forwardPage() {
 // 			setInterval(locationNextPage, 1000);
-// 		}
+		}
 // 		function locationNextPage() {
 // 			if (willLocation && locationOnce) {
 // 				locationOnce = false;
@@ -39,7 +37,7 @@
 // 				willLocation = true;
 // 			}
 // 		}
-// 	</s:else>
+	</s:else>
 	
 </script>
 	</head>
@@ -50,14 +48,14 @@
 					<table cellSpacing='0' cellPadding='4' width="100%" border="0">
 						<tr>
 							<td align="center">
-								<img src="../resource/images/folder_big.gif">
+								<img src="resource/images/folder_big.gif">
 								操作已成功
 							</td>
 						</tr>
-						<s:if test="#parameters.reUrl != null && !#parameters.reUrl[0].equals(\"\")">
+						<s:if test="reUrl != null && !reUrl.equals(\"\")">
 							<tr>
 								<td align="center">
-									1秒后跳转，如果没有跳转请<a style="color: red;" id="commit" href="../<s:property escape="false" value="#parameters.reUrl[0]"/>">点击此处</a>
+									1秒后跳转，如果没有跳转请<a style="color: red;" id="commit" href="<s:property escape="false" value="reUrl"/>">点击此处</a>
 								</td>
 							</tr>
 						</s:if>

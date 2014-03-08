@@ -70,6 +70,18 @@
 							</li>
 							
 							<li>
+								<span class="folder">外经证管理</span>
+								<ul>
+										<li>
+											<span class="file">
+												<a onclick="urlTarget('tbErpOutboundbusinesscertificate_list.action');" title="外经证列表">外经证列表</a>
+												<br/>
+											</span>
+										</li>
+								</ul>
+							</li>
+							
+							<li>
 								<span class="folder">用户管理</span>
 								<ul>
 										<li>

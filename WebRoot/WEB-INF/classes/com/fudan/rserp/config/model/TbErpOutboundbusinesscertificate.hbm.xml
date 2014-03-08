@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-3-6 21:53:19 by Hibernate Tools 3.4.0.CR1 -->
+
+<hibernate-mapping>
+	<class name="com.fudan.rserp.config.model.TbErpOutboundbusinesscertificate" table="tb_erp_outboundBusinessCertificate">
+		<id
+			name="id"
+			type="java.lang.Integer"
+			column="id"
+		>
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="certificateMoney"
+			column="certificateMoney"
+			type="java.lang.Float"
+		/>
+		<property
+			name="trackUserID"
+			column="trackUserID"
+			type="java.lang.Integer"
+		/>
+		<property
+			name="remark"
+			column="remark"
+			type="java.lang.String"
+		/>
+		<property
+			name="certificateCost"
+			column="certificateCost"
+			type="java.lang.Float"
+		/>
+		<property
+			name="state"
+			column="state"
+			type="java.lang.Integer"
+		/>
+		<property
+			name="copiesNumber"
+			column="copiesNumber"
+			type="java.lang.Integer"
+		/>
+		<property
+			name="pathOfCopy"
+			column="pathOfCopy"
+			type="java.lang.String"
+		/>
+		<property
+			name="invalidDate"
+			column="invalidDate"
+			type="java.sql.Date"
+		/>
+		<property
+			name="writeoffsDate"
+			column="writeoffsDate"
+			type="java.sql.Date"
+		/>
+		<property
+			name="certificateNumber"
+			column="certificateNumber"
+			type="java.lang.String"
+		/>
+		<property
+			name="documentNumber"
+			column="documentNumber"
+			type="java.lang.Integer"
+		/>
+		<property
+			name="contractID"
+			column="contractID"
+			type="java.lang.Integer"
+		/>
+		<property
+			name="effectiveDate"
+			column="effectiveDate"
+			type="java.sql.Date"
+		/>
+		<property
+			name="stateOfCopy"
+			column="stateOfCopy"
+			type="java.lang.Integer"
+		/>
+	</class>
+</hibernate-mapping>

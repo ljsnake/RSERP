@@ -38,4 +38,12 @@
 			</bean>
 		</property>
 	</bean>
+	
+	<bean id="tbErpOutboundbusinesscertificateService" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.fudan.rserp.module.certificateManager.TbErpOutboundbusinesscertificateService">
+				<property name="dao" ref="tbErpOutboundbusinesscertificateDAO" />
+			</bean>
+		</property>
+	</bean>
 </beans>

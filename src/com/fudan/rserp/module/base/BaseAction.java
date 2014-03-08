@@ -13,6 +13,7 @@ public class BaseAction implements Serializable{
 	protected Message msg;//错误信息及返回路径.
 	
 	protected String error(Message msg){
+		this.msg = msg;
 		this.page = "message.jsp";
 		return Constants.SUCCESS;
 	}

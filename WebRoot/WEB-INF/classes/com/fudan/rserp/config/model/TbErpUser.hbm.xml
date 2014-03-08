@@ -1,26 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-3-6 21:53:19 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.fudan.rserp.config.model.TbErpUser" table="TB_ERP_USER" >
+    <class name="com.fudan.rserp.config.model.TbErpUser" table="TB_ERP_USER">
         <id name="id" type="java.lang.Integer">
-            <column name="ID"/>
+            <column name="ID" />
             <generator class="native" />
         </id>
         <property name="name" type="java.lang.String">
-            <column name="NAME" length="20" />
+            <column name="NAME" />
         </property>
         <property name="loginName" type="java.lang.String">
-            <column name="LOGINNAME" length="20" />
+            <column name="LOGINNAME" />
         </property>
         <property name="password" type="java.lang.String">
-            <column name="PASSWORD" length="30"/>
+            <column name="PASSWORD" />
         </property>
         <property name="role" type="java.lang.String">
-            <column name="ROLE" length="1"/>
+            <column name="ROLE" />
         </property>
         <property name="email" type="java.lang.String">
-            <column name="EMAIL" length="30"/>
+            <column name="EMAIL"/>
         </property>
     </class>
 </hibernate-mapping>

@@ -20,4 +20,8 @@
 	<bean id="yhglAction" class="com.fudan.rserp.module.yhgl.YhglAction">
 		<property name="service" ref="yhglService"/>
 	</bean>
+	
+	<bean id="tbErpOutboundbusinesscertificateAction" class="com.fudan.rserp.module.certificateManager.TbErpOutboundbusinesscertificateAction">
+		<property name="service" ref="tbErpOutboundbusinesscertificateService"/>
+	</bean>
 </beans>

@@ -16,4 +16,5 @@
 	
 	<bean id="ajaxDao" class="com.fudan.rserp.module.ajax.AjaxDao" parent="baseHibernateDao" />
 	<bean id="yhglDao" class="com.fudan.rserp.module.yhgl.YhglDao" parent="baseHibernateDao" />
+	<bean id="tbErpOutboundbusinesscertificateDAO" class="com.fudan.rserp.module.certificateManager.TbErpOutboundbusinesscertificateDAO" parent="baseHibernateDao" />
 </beans>
