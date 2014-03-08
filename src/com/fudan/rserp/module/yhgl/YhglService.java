@@ -17,17 +17,26 @@ public class YhglService {
 		ps = dao.getYhList(ps, lc);
 		return ps;
 	}
-	public void addUser(TbErpUser user){
+	public int addUser(TbErpUser user){
 		if(user!=null){
-			if(user.getPassword()!=null&&!"".equals(user.getPassword())){
-				try {
-					user.setPassword(PasswordManager.encryptAndEncodeString(user.getPassword()));
-				} catch (PasswordManagerException e) {
-					e.printStackTrace();
+			if(user.getLoginName()!=null&&!"".equals(user.getLoginName())){
+				List<?> ls = dao.checkLoginNameExist(user.getLoginName());
+				if(ls!=null&&ls.size()>0){
+					return 2;//登录名已存在
 				}
+				if(user.getPassword()!=null&&!"".equals(user.getPassword())){
+					try {
+						user.setPassword(PasswordManager.encryptAndEncodeString(user.getPassword()));
+					} catch (PasswordManagerException e) {
+						e.printStackTrace();
+						return 10;//异常
+					}
+				}
+				dao.saveOrUpdateObject(user);
+				return 0;//操作成功.
 			}
-			dao.saveOrUpdateObject(user);
 		}
+		return 1;//传入参数不合法.
 	}
 	public TbErpUser getUser(TbErpUser uservo){
 		if(uservo!=null){
@@ -61,7 +70,7 @@ public class YhglService {
 			String loginName = BaseGetSessionValue.getUserLoginName();
 			if(loginName!=null&&!"".equals(loginName)){
 				List<?> ls = dao.checkUserLoginNamePasswordExist(loginName,passwordold);
-				if(ls==null&&ls.size()<1){
+				if(ls==null||ls.size()<1){
 					return 2;//原密码错误.
 				}
 			}

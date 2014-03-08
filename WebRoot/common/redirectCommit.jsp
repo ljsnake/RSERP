@@ -7,12 +7,19 @@
 		<title>Insert title here</title>
 <!-- 		<base target="_self" /> -->
 		<script type="text/javascript">
+<<<<<<< HEAD
 // 	var reUrl = "";
 <%--	var ru = ${param.reUrl };--%>
 var willLocation = false;
 var locationOnce = true;
 	<s:if test="reUrl != null && !reUrl.equals(\"\")">
 		var reUrl1 = '<s:property escape="false" value="reUrl"/>';
+=======
+	var reUrl = "";
+	var willLocation = false;
+	var locationOnce = true;
+	<s:if test="#parameters.reUrl[0] != null && !#parameters.reUrl[0].equals(\"\")">
+>>>>>>> 2a72f4cf459112f201b957cf2f35a35e0b05f8a9
 		function forwardPage() {
 			setInterval(locationNextPage, 1000);
 		}
@@ -26,17 +33,29 @@ var locationOnce = true;
 		}
 	</s:if>
 	<s:else>
+<<<<<<< HEAD
 		function forwardPage() {
 // 			setInterval(locationNextPage, 1000);
 		}
 // 		function locationNextPage() {
+=======
+	
+		function forwardPage() {
+// 			setInterval(locationNextPage, 1000);
+		}
+		function locationNextPage() {
+>>>>>>> 2a72f4cf459112f201b957cf2f35a35e0b05f8a9
 // 			if (willLocation && locationOnce) {
 // 				locationOnce = false;
 // 				window.close();
 // 			} else {
 // 				willLocation = true;
 // 			}
+<<<<<<< HEAD
 // 		}
+=======
+		}
+>>>>>>> 2a72f4cf459112f201b957cf2f35a35e0b05f8a9
 	</s:else>
 	
 </script>

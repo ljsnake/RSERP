@@ -25,7 +25,7 @@
 								<span><a href="javascript:void(0);" onclick="exitTaxi();">[退出]</a> </span>
 							</div>
 							<div id="head_icon02">
-								<span>用户名：<s:property value="(#session['loginName'])"/></span>
+								<span>用户名：<s:property value="(#session['user.loginName'])"/></span>
 							</div>
 						</div>
 					</div>

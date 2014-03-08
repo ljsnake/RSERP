@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.fudan.rserp.config.model.TbErpContract" table="TB_ERP_CONTRACT" >
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="native" />
+        </id>
+        <property name="contractNumber" type="java.lang.String">
+            <column name="CONTRACTNUMBER" length="20" />
+        </property>
+        <property name="contractName" type="java.lang.String">
+            <column name="CONTRACTNAME" length="30" />
+        </property>
+        <property name="signingTime" type="java.util.Date">
+            <column name="SIGNINGTIME" length="7" />
+        </property>
+        <property name="modifiedTime" type="java.util.Date">
+            <column name="MODIFIEDTIME" length="7" />
+        </property>
+        <property name="modifiedUser" type="java.lang.String">
+            <column name="MODIFIEDUSER" length="40" />
+        </property>
+        <property name="version" type="java.lang.String">
+            <column name="VERSION" length="20" />
+        </property>
+        <many-to-one name="subcontractor" column="SUBCONTRACTORID" unique="true"/>
+        <many-to-one name="contractor" column="CONTRACTORID" unique="true"/>
+        <property name="projectName" type="java.lang.String">
+            <column name="PROJECTNAME" length="30" />
+        </property>
+        <property name="projectAdress" type="java.lang.String">
+            <column name="PROJECTADRESS" length="30" />
+        </property>
+        <property name="projectContent" type="java.lang.String">
+            <column name="PROJECTCONTENT" length="30" />
+        </property>
+        <property name="contractMoney" type="java.lang.Float">
+            <column name="CONTRACTMONEY" />
+        </property>
+        <property name="contractCost" type="java.lang.Float">
+            <column name="CONTRACTCOST" />
+        </property>
+        <property name="startDate" type="java.util.Date">
+            <column name="STARTDATE" length="7" />
+        </property>
+        <property name="endDate" type="java.util.Date">
+            <column name="ENDDATE" length="7" />
+        </property>
+        <property name="cooperationType" type="java.lang.Integer">
+            <column name="COOPERATIONTYPE" />
+        </property>
+        <property name="managementFeePoint" type="java.lang.Float">
+            <column name="MANAGEMENTFEEPOINT" />
+        </property>
+        <property name="copiesNumber" type="java.lang.Integer">
+            <column name="COPIESNUMBER" />
+        </property>
+        <property name="pathOfCopy" type="java.lang.String">
+            <column name="PATHOFCOPY" length="40" />
+        </property>
+         <property name="stateOfCopy" type="java.lang.Integer">
+            <column name="STATEOFCOPY" />
+        </property>
+        <property name="trackUserID" type="java.lang.Integer">
+            <column name="TRACKUSERID" />
+        </property>
+    </class>
+</hibernate-mapping>

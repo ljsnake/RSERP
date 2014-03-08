@@ -11,14 +11,10 @@ public class HtglAction extends BaseAction {
 	private HtglService service;
 	private PageSet pageSet;
 	private ListCondition condition;
-	
+	private Integer id;
+	//分包单位
 	public String fbdwList(){
-		System.out.println("HtglAction-fbdwList");
-//		pageSet = service.getFbdwList(pageSet, condition);
-		if(pageSet==null){
-			pageSet = new PageSet();
-		}
-		
+		pageSet = service.getFbdwList(pageSet, condition);
 		page = this.ROOR_PATH + "jsp/htgl/fbdwlist.jsp";
 		return Constants.SUCCESS;
 	}
@@ -27,6 +23,70 @@ public class HtglAction extends BaseAction {
 		return Constants.SUCCESS;
 	}
 	public String fbdwAddDo(){
+		
+		return Constants.SUCCESS;
+	}
+	public String fbdwShow(){
+		
+		return Constants.SUCCESS;
+	}
+	public String fbdwUpdate(){
+		
+		return Constants.SUCCESS;
+	}
+	public String fbdwUpdateDo(){
+		
+		return Constants.SUCCESS;
+	}
+	//总包单位
+	public String zbdwList(){
+		pageSet = service.getZbdwList(pageSet, condition);
+		page = this.ROOR_PATH + "jsp/htgl/zbdwlist.jsp";
+		return Constants.SUCCESS;
+	}
+	public String zbdwAdd(){
+		
+		return Constants.SUCCESS;
+	}
+	public String zbdwAddDo(){
+		
+		return Constants.SUCCESS;
+	}
+	public String zbdwShow(){
+		
+		return Constants.SUCCESS;
+	}
+	public String zbdwUpdate(){
+		
+		return Constants.SUCCESS;
+	}
+	public String zbdwUpdateDo(){
+		
+		return Constants.SUCCESS;
+	}
+	//合同
+	public String htList(){
+		pageSet = service.getHtList(pageSet, condition);
+		page = this.ROOR_PATH + "jsp/htgl/htlist.jsp";
+		return Constants.SUCCESS;
+	}
+	public String htAdd(){
+		
+		return Constants.SUCCESS;
+	}
+	public String htAddDo(){
+		
+		return Constants.SUCCESS;
+	}
+	public String htShow(){
+		
+		return Constants.SUCCESS;
+	}
+	public String htUpdate(){
+		
+		return Constants.SUCCESS;
+	}
+	public String htUpdateDo(){
 		
 		return Constants.SUCCESS;
 	}
@@ -48,5 +108,11 @@ public class HtglAction extends BaseAction {
 	}
 	public void setCondition(ListCondition condition) {
 		this.condition = condition;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }

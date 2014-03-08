@@ -28,4 +28,8 @@ public class YhglDao extends BaseHibernateDao{
 		String hql = "select loginName from TbErpUser where loginName='"+loginName+"' and password='"+password+"'";
 		return queryByHQL(hql);
 	}
+	public List<?> checkLoginNameExist(String loginName){
+		String hql = "select loginName from TbErpUser where loginName = '"+loginName+"'";
+		return queryByHQL(hql);
+	}
 }

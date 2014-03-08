@@ -1,31 +1,20 @@
 package com.fudan.rserp.security.login;
 
-//import java.util.List;
-//import java.util.Map;
-
 import java.util.Map;
 
 import com.fudan.rserp.config.constant.Constants;
 import com.opensymphony.xwork2.ActionContext;
 
-
 public class LoginAction {
 	private LoginService loginService;
-	
 	private String page;
-	
 	private String loginName;
 	private String password;
-	
 	private String errorMessage;
-	
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public String login() {
-		System.out.println("login ~ login");
-		System.out.println("loginName:"+loginName+"#password:"+password);
-		//com.hp.ipg.security.PasswordManager.encryptAndEncodeString(arg0);
-		//PasswordManager.decodeAndDecryptString
+		//TODO 根据登录名密码及加密校验是否成功登录，并session赋值.
 		if(loginName==null||"".equals(loginName)
 				||null==password||"".equals(password)){
 			errorMessage = "登录名或密码不正确";
@@ -34,12 +23,16 @@ public class LoginAction {
 		}
 		Map session = ActionContext.getContext().getSession();
 		session.put("user.loginName", loginName);
+<<<<<<< HEAD
+=======
+		session.put("user.name", loginName);
+		session.put("user.id", loginName);
+>>>>>>> 2a72f4cf459112f201b957cf2f35a35e0b05f8a9
 		page = "/index.jsp";
 		return Constants.SUCCESS;
 	}
 	
 	public String logout() {
-		System.out.println("login ~ logout");
 		ActionContext.getContext().getSession().clear();
 		page = "/login.jsp";
 		return Constants.REDIRECT;
@@ -75,5 +68,4 @@ public class LoginAction {
 	public void setErrorMessage(String errorMessage) {
 		this.errorMessage = errorMessage;
 	}
-	
 }

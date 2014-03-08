@@ -15,16 +15,6 @@
 	function createYh(){
 		window.location.href = "yhgl_add.action?reUrl=yhgl_list.action";
 	}
-	function showYh(id){
-// 		window.location.href = "yhgl_show.action?user.id="+id;
-		window.location.href = "yhgl_show.action?id="+id;
-		alert(id);
-	}
-	function updateYh(id){
-// 		window.location.href = "yhgl_update.action?user.id="+id;
-		window.location.href = "yhgl_update.action?id="+id;
-		alert(id);
-	}
 </script>
 </head>
 <body class="content-pages-body">

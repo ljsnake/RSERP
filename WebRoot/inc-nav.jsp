@@ -43,29 +43,18 @@
 							<li>
 								<span class="folder">通告栏</span>
 								<ul>
-										<li>
-											<span class="file">
-												<a onclick="urlTarget('tggl_show.action');" title="查看通告栏">查看通告</a>
-												<br/>
-											</span>
-										</li>
+									<li><span class="file"><a onclick="urlTarget('tggl_show.action');" title="查看通告栏">查看通告</a><br/></span></li>
 								</ul>
 							</li>
 							<li>
 								<span class="folder">合同管理</span>
 								<ul>
-										<li>
-											<span class="file">
-												<a onclick="urlTarget('htgl_fbdwList.action');" title="列表分包单位">分包单位列表</a>
-												<br/>
-											</span>
-										</li>
-										<li>
-											<span class="file">
-												<a onclick="urlTarget('htgl_fbdwAdd.action');" title="添加分包单位">分包单位新增</a>
-												<br/>
-											</span>
-										</li>
+									<li><span class="file"><a onclick="urlTarget('htgl_fbdwList.action');" title="列表分包单位">分包单位列表</a><br/></span></li>
+									<li><span class="file"><a onclick="urlTarget('htgl_fbdwAdd.action');" title="添加分包单位">分包单位新增</a><br/></span></li>
+									<li><span class="file"><a onclick="urlTarget('htgl_zbdwList.action');" title="列表总包单位">总包单位列表</a><br/></span></li>
+									<li><span class="file"><a onclick="urlTarget('htgl_zbdwAdd.action');" title="添加总包单位">总包单位新增</a><br/></span></li>
+									<li><span class="file"><a onclick="urlTarget('htgl_htList.action');" title="列表合同">合同列表</a><br/></span></li>
+									<li><span class="file"><a onclick="urlTarget('htgl_htAdd.action');" title="添加合同">合同新增</a><br/></span></li>
 								</ul>
 							</li>
 							
@@ -84,24 +73,9 @@
 							<li>
 								<span class="folder">用户管理</span>
 								<ul>
-										<li>
-											<span class="file">
-												<a onclick="urlTarget('yhgl_list.action');" title="列表用户">用户列表</a>
-												<br/>
-											</span>
-										</li>
-										<li>
-											<span class="file">
-												<a onclick="urlTarget('yhgl_add.action');" title="添加用户">用户新增</a>
-												<br/>
-											</span>
-										</li>
-										<li>
-											<span class="file">
-												<a onclick="urlTarget('yhgl_updatePassword.action');" title="密码修改">修改密码</a>
-												<br/>
-											</span>
-										</li>
+									<li><span class="file"><a onclick="urlTarget('yhgl_list.action');" title="列表用户">用户列表</a><br/></span></li>
+									<li><span class="file"><a onclick="urlTarget('yhgl_add.action');" title="添加用户">用户新增</a><br/></span></li>
+									<li><span class="file"><a onclick="urlTarget('yhgl_updatePassword.action');" title="密码修改">修改密码</a><br/></span></li>
 								</ul>
 							</li>
 					</ul>
