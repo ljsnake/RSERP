@@ -21,7 +21,6 @@ public class HtglDao extends BaseHibernateDao{
 		ps = getCriteriaPageSet(criteria, ps);
 		return ps;
 	}
-	
 	public PageSet getZbdwList(PageSet ps,ListCondition lc){
 		Criteria criteria = this.getSession().createCriteria(TbErpContractor.class);
 		if(lc!=null){

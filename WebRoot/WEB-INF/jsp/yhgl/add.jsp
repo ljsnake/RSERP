@@ -16,7 +16,6 @@
 $(document).ready(function(){
 	$("#userloginName").blur(function(){
 		$('#isloginNameok').val('0');
-		checkCardNum(this);
 		var loginName = $(this).val();
 		if(loginName==''){
 			$('#loginNamespan').html('').css({display:'none'});

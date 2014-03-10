@@ -5,57 +5,40 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Insert title here</title>
-<!-- 		<base target="_self" /> -->
+		<base target="_self" />
 		<script type="text/javascript">
-<<<<<<< HEAD
-// 	var reUrl = "";
-<%--	var ru = ${param.reUrl };--%>
-var willLocation = false;
-var locationOnce = true;
-	<s:if test="reUrl != null && !reUrl.equals(\"\")">
-		var reUrl1 = '<s:property escape="false" value="reUrl"/>';
-=======
 	var reUrl = "";
 	var willLocation = false;
 	var locationOnce = true;
 	<s:if test="#parameters.reUrl[0] != null && !#parameters.reUrl[0].equals(\"\")">
->>>>>>> 2a72f4cf459112f201b957cf2f35a35e0b05f8a9
 		function forwardPage() {
+			reUrl = location.search.substring(location.search.indexOf("=")+1);//取出redirectURL
+			document.getElementById("commit").href="../" + reUrl;
 			setInterval(locationNextPage, 1000);
 		}
+	
 		function locationNextPage() {
 			if (willLocation && locationOnce) {
 				locationOnce = false;
-				window.location.href = reUrl1;
+				window.location.href = "../" + reUrl;
 			} else {
 				willLocation = true;
 			}
 		}
 	</s:if>
 	<s:else>
-<<<<<<< HEAD
-		function forwardPage() {
-// 			setInterval(locationNextPage, 1000);
-		}
-// 		function locationNextPage() {
-=======
 	
 		function forwardPage() {
 // 			setInterval(locationNextPage, 1000);
 		}
 		function locationNextPage() {
->>>>>>> 2a72f4cf459112f201b957cf2f35a35e0b05f8a9
 // 			if (willLocation && locationOnce) {
 // 				locationOnce = false;
 // 				window.close();
 // 			} else {
 // 				willLocation = true;
 // 			}
-<<<<<<< HEAD
-// 		}
-=======
 		}
->>>>>>> 2a72f4cf459112f201b957cf2f35a35e0b05f8a9
 	</s:else>
 	
 </script>
@@ -67,14 +50,14 @@ var locationOnce = true;
 					<table cellSpacing='0' cellPadding='4' width="100%" border="0">
 						<tr>
 							<td align="center">
-								<img src="resource/images/folder_big.gif">
+								<img src="../resource/images/folder_big.gif">
 								操作已成功
 							</td>
 						</tr>
-						<s:if test="reUrl != null && !reUrl.equals(\"\")">
+						<s:if test="#parameters.reUrl != null && !#parameters.reUrl[0].equals(\"\")">
 							<tr>
 								<td align="center">
-									1秒后跳转，如果没有跳转请<a style="color: red;" id="commit" href="<s:property escape="false" value="reUrl"/>">点击此处</a>
+									1秒后跳转，如果没有跳转请<a style="color: red;" id="commit" href="../<s:property escape="false" value="#parameters.reUrl[0]"/>">点击此处</a>
 								</td>
 							</tr>
 						</s:if>

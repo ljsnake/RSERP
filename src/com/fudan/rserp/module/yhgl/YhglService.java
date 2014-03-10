@@ -20,8 +20,7 @@ public class YhglService {
 	public int addUser(TbErpUser user){
 		if(user!=null){
 			if(user.getLoginName()!=null&&!"".equals(user.getLoginName())){
-				List<?> ls = dao.checkLoginNameExist(user.getLoginName());
-				if(ls!=null&&ls.size()>0){
+				if(dao.checkPropertyInEntityHasExist("TbErpUser","loginName",user.getLoginName())){
 					return 2;//登录名已存在
 				}
 				if(user.getPassword()!=null&&!"".equals(user.getPassword())){

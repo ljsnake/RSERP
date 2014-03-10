@@ -59,7 +59,23 @@ public class BaseHibernateDao extends HibernateDaoSupport {
 	protected Object queryFirstResultBySql(String sql){
 		return this.getSession().createSQLQuery(sql).setFirstResult(0).setMaxResults(1).uniqueResult();
 	}
-	// 待扩展
+	// 待扩展	
+	/**
+	 * 校验如登录名等是否存在
+	 * @param entityName
+	 * @param propertyName
+	 * @param propertyValue
+	 * @return
+	 */
+	public boolean checkPropertyInEntityHasExist(String entityName, String propertyName, String propertyValue){
+		String hql = "select "+propertyName+" from "+entityName+" where loginName = '"+propertyValue+"'";
+		List<?> ls = queryByHQL(hql);
+		if(ls!=null&&ls.size()>0){
+			return true;
+		}
+		return false;
+	}
+	
 	protected boolean isObjectEmpty(Object o){
 		return o==null || "".equals(o);
 	}

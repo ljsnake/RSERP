@@ -1,5 +1,7 @@
 package com.fudan.rserp.module.ajax;
 
+import java.io.UnsupportedEncodingException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts2.interceptor.ServletRequestAware;
@@ -22,7 +24,14 @@ public class AjaxAction extends BaseAction implements ServletRequestAware,Servle
 		String loginName = request.getParameter("loginName");
 		return ajax_data(service.checkLoginName(loginName));
 	}
-	
+	//新增分包单位检查名称是否存在
+	public String checkSubcontractorName() throws UnsupportedEncodingException{
+		String name = request.getParameter("name");
+		if(name != null){
+			name = new String(name.getBytes("ISO-8859-1"),"UTF-8");
+		}
+		return ajax_data(service.checkSubcontractorName(name));
+	}
 	
 	
 	private String ajax_data(String data){

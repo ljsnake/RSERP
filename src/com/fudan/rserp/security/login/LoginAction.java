@@ -23,11 +23,8 @@ public class LoginAction {
 		}
 		Map session = ActionContext.getContext().getSession();
 		session.put("user.loginName", loginName);
-<<<<<<< HEAD
-=======
 		session.put("user.name", loginName);
 		session.put("user.id", loginName);
->>>>>>> 2a72f4cf459112f201b957cf2f35a35e0b05f8a9
 		page = "/index.jsp";
 		return Constants.SUCCESS;
 	}

@@ -11,3 +11,6 @@ src/database.properties
 WebRoot/WEB-INF/classes/com/fudan/rserp/config/model/TbErpContract.hbm.xml
 WebRoot/WEB-INF/classes/com/fudan/rserp/config/model/TbErpContractor.hbm.xml
 WebRoot/WEB-INF/classes/com/fudan/rserp/config/model/TbErpSubcontractor.hbm.xml
+WebRoot/WEB-INF/classes/com/fudan/rserp/config/model/TbErpUser.hbm.xml
+WebRoot/WEB-INF/classes/com/fudan/rserp/config/model/TbErpUser.hbm.xml
+src/database.properties

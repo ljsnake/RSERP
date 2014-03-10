@@ -18,7 +18,7 @@
 </script>
 	</head>
 	<body class="content-pages-body">
-<form action="htgl_fbdwList.action" name="form1" method="post">
+<form action="htgl_zbdwList.action" name="form1" method="post">
 	<div class="content-pages-wrap01">
 		<table width="100%" border="0" align="center" cellpadding="0"
 			cellspacing="0" class="bordercol_01">
@@ -87,9 +87,9 @@
 							<s:else><s:property value="#ls.phone" /></s:else>
 						</td>
 						<td nowrap="nowrap" align="center">
-							<a href="htgl_zbdwShow.action?id=<s:property value="#ls.id" />" >查看</a>
+							<a href="htgl_zbdwShow.action?contractor.id=<s:property value="#ls.id" />" >查看</a>
 							&nbsp;
-							<a href="htgl_zbdwUpdate.action?id=<s:property value="#ls.id" />" >修改</a>
+							<a href="htgl_zbdwUpdate.action?contractor.id=<s:property value="#ls.id" />&reUrl=htgl_zbdwList.action" >修改</a>
 						</td>
 					</tr>
 				</s:iterator>

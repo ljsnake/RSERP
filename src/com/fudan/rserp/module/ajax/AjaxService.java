@@ -1,19 +1,20 @@
 package com.fudan.rserp.module.ajax;
 
-import java.util.List;
-
 public class AjaxService {
 	private AjaxDao dao;
 	public String checkLoginName(String loginName){
-		String re = "0";
-		if(loginName!=null&&!"".equals(loginName)){
-			List<?> ls = dao.checkLoginNameExist(loginName);
-			if(ls!=null&&ls.size()>0){
-				re = "1";
-			}
+		if(dao.checkPropertyInEntityHasExist("TbErpUser","loginName",loginName)){
+			return "1";
 		}
-		return re;
+		return "0";
 	}
+	public String checkSubcontractorName(String name){
+		if(dao.checkPropertyInEntityHasExist("TbErpSubcontractor","name",name)){
+			return "1";
+		}
+		return "0";
+	}
+	
 
 	public AjaxDao getDao() {
 		return dao;

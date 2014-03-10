@@ -70,9 +70,9 @@
 						<td nowrap="nowrap" align="center"><s:property value="#ls.id" /></td>
 						<td nowrap="nowrap" align="center"><s:property value="#ls.name" /></td>
 						<td nowrap="nowrap" align="center">
-							<a href="htgl_fbdwShow.action?id=<s:property value="#ls.id" />" >查看</a>
+							<a href="htgl_fbdwShow.action?subcontractor.id=<s:property value="#ls.id" />" >查看</a>
 							&nbsp;
-							<a href="htgl_fbdwUpdate.action?id=<s:property value="#ls.id" />" >修改</a>
+							<a href="htgl_fbdwUpdate.action?subcontractor.id=<s:property value="#ls.id" />&&reUrl=htgl_fbdwList.action" >修改</a>
 						</td>
 					</tr>
 				</s:iterator>

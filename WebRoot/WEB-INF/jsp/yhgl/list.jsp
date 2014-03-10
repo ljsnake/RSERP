@@ -82,7 +82,7 @@
 						<td nowrap="nowrap" align="center">
 							<a href="yhgl_show.action?user.id=<s:property value="#ls.id" />" >查看</a>
 							&nbsp;
-							<a href="yhgl_update.action?user.id=<s:property value="#ls.id" />" >修改</a>
+							<a href="yhgl_update.action?user.id=<s:property value="#ls.id" />&reUrl=yhgl_list.action" >修改</a>
 						</td>
 					</tr>
 				</s:iterator>
